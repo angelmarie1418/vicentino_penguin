@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Penguin Sales & Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="contact.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 900px;
+            max-width: 100%;
+        }
+        .image-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            background: #f8f8f8;
+        }
+        .image-side img {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Makes white backgrounds disappear */
+}
+
+        .form-side {
+            flex: 1;
+            padding: 2rem;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .input-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #555;
+        }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 10px 10px 10px 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-group textarea {
+            height: 100px;
+            resize: none;
+        }
+        .btn {
+            width: 50%;
+            padding: 10px;
+            background: #1f32ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #dcdcdc;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .image-side {
+                order: -1;
+            }
+            .image-side img {
+                width: 80%;
+                max-width: 250px;
+            }
+        }
+        .back-btn {
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px; /* Moves it to the left */
+    top: 20px; /* Keeps it at the top */
+}
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <div class="container">
+        <div class="image-side">
+            <img src="pick.png" alt="Customer Service">
+        </div>
+        <div class="form-side">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-list"></i>
+                    <select required>
+                        <option value="">Select a Category</option>
+                        <option value="Trucking">Trucking Service</option>
+                        <option value="Auto Parts">Auto Parts</option>
+                        <option value="Construction">Construction</option>
+                        <option value="heavy_equipment">Heavy Equipment Rental</option>
+                        <option value="bridal-car">Bridal-car</option>
+                        <option value="towing services 24/7">Towing Services 24/7</option>
+                        <option value="general_construction">General Construction</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-comment"></i>
+                    <textarea placeholder="Your Concern"></textarea>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" placeholder="Your Contact Number" required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for reaching out! We will get back to you soon.");
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Penguin Sales & Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 2rem;
+        }
+        .container {
+            border: 1px solid grey;
+            margin: auto;
+            width: 70%;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            text-align: left;
+            margin-top: 100px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 500px; 
+            height: auto;
+            border-radius: 10px;
+        }
+        .content {
+            flex: 1;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .description {
+            margin: 1rem 0 2rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .service-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Space between icon and text */
+    padding: 1rem;
+    background: #fefeff;
+    color: black;
+    text-decoration: none;
+    border: 1px solid blue;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.card i {
+    font-size: 1.5rem; /* Bigger icon */
+    color: blue;
+}
+
+.card:hover {
+    background: #7a7a7a;
+    color: white;
+}
+
+.card:hover i {
+    color: white; /* Change icon color on hover */
+}
+
+        .card i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        @media (min-width: 600px) {
+            .service-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .image-container img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        hr {
+            width: 100px;
+        }
+        .back-btn {
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px; /* Moves it to the left */
+    top: 20px; /* Keeps it at the top */
+}
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="pic.jpg" alt="Customer Service">
+        </div>
+        <div class="content">
+            <h1 class="title">Our Services</h1><br><hr>
+            <p class="description">Explore our range of services designed to meet your needs.</p>
+            <div class="service-cards">
+                <a href="bridal car.html" class="card">
+                    <i class="fas fa-car"></i> <span>Bridal Car Services</span>
+                </a>
+                <a href="towing.html" class="card">
+                    <i class="fas fa-truck"></i> <span>Towing Services 24/7</span>
+                </a>
+                <a href="trucking.html" class="card">
+                    <i class="fas fa-truck-moving"></i> <span>Trucking Services</span>
+                </a>
+                <a href="heavy equipment.html" class="card">
+                    <i class="fas fa-cogs"></i> <span>Heavy Equipment Rental</span>
+                </a>
+                <a href="general.html" class="card">
+                    <i class="fas fa-hard-hat"></i> <span>General Construction & Maintenance</span>
+                </a>
+                <a href="furniture.html" class="card">
+                    <i class="fas fa-couch"></i> <span>Furniture Hotel & Residential</span>
+                </a>
+                <a href="auto parts.html" class="card">
+                    <i class="fas fa-tools"></i> <span>Auto Parts</span>
+                </a>
+            </div>
+        </div>
+        
+
+</body>
+</html>

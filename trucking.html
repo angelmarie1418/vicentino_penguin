@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trucking Services | Penguin Sales & Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="trucking.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .loading-screen {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-out;
+            z-index: 999;
+        }
+        .loading-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loader {
+            border: 5px solid #ccc;
+            border-top: 5px solid #ff0000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-top: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        .btn:hover {
+            background: #cc0000;
+        }
+        .service-info {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #fff;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-info ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .service-info li {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .trucking-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 2rem;
+        }
+        .gallery-item img {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .back-btn {
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px; /* Moves it to the left */
+    top: 20px; /* Keeps it at the top */
+}
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <a href="service.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <section class="hero">
+        <h1>Trucking Services</h1><br>
+        <img src="trucking.webp" alt="Trucking Services">
+    </section>
+
+    <section class="service-info">
+        <h2>Efficient & Safe Trucking Solutions</h2><br>
+        <p>We provide top-notch trucking services for all your transportation needs, ensuring timely and secure deliveries.</p>
+        <h3>Our Services Include:</h3>
+        <ul>
+            <li>– Freight transportation</li>
+            <li>– Heavy equipment hauling</li>
+            <li>– Refrigerated trucking</li>
+            <li>– Expedited shipping</li>
+            <li>– Affordable logistics solutions</li>
+        </ul>
+        <p><strong>Contact us for trucking inquiries:</strong> (0923) 086 8342</p>
+        <a href="contact.html" class="btn">Get a Quote</a>
+    </section>
+
+    <section class="trucking-gallery">
+        <div class="gallery-item"><img src="trucking1.jpg" alt="Trucking Service 1"></div>
+        <div class="gallery-item"><img src="trucking2.webp" alt="Trucking Service 2"></div>
+        <div class="gallery-item"><img src="trucking3.jpg" alt="Trucking Service 3"></div>
+        <div class="gallery-item"><img src="trucking4.webp" alt="Trucking Service 4"></div>
+        <div class="gallery-item"><img src="trucking5.png" alt="Trucking Service 5"></div>
+    </section>
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(() => {
+                document.querySelector(".loading-screen").classList.add("hide");
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
